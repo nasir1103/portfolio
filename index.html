@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohd Nasir | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins,sans-serif;
+}
+
+body{
+  background:#0b0f14;
+  color:#e5e7eb;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.container{
+  display:grid;
+  grid-template-columns: 1.2fr 1fr;
+  min-height:100vh;
+}
+
+/* ===== HERO IMAGE SIDE ===== */
+.hero-img{
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.6), rgba(0,0,0,.9)),
+    url("https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  padding:4rem;
+}
+
+.hero-text h1{
+  font-size:2.8rem;
+  margin-bottom:.5rem;
+}
+
+.hero-text h1 span{
+  color:#22c55e;
+}
+
+.hero-text p{
+  max-width:400px;
+  color:#9ca3af;
+  margin-bottom:1.5rem;
+}
+
+.hero-buttons a{
+  display:inline-block;
+  padding:.7rem 1.4rem;
+  margin-right:.6rem;
+  border-radius:6px;
+  text-decoration:none;
+  font-size:.9rem;
+  transition:.3s;
+}
+
+.btn-primary{
+  background:#22c55e;
+  color:#000;
+}
+
+.btn-outline{
+  border:1px solid #22c55e;
+  color:#22c55e;
+}
+
+.hero-buttons a:hover{
+  transform:translateY(-2px);
+}
+
+/* ===== CONTENT SIDE ===== */
+.content{
+  padding:3rem;
+  overflow-y:auto;
+}
+
+/* NAV */
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:2rem;
+}
+
+.nav a{
+  color:#9ca3af;
+  text-decoration:none;
+  margin-left:1rem;
+  font-size:.9rem;
+}
+
+.nav a:hover{
+  color:#22c55e;
+}
+
+/* SECTIONS */
+section{
+  margin-bottom:3rem;
+}
+
+section h2{
+  font-size:1.6rem;
+  margin-bottom:1rem;
+}
+
+/* SKILLS */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:1rem;
+}
+
+.skill{
+  background:#111827;
+  padding:1rem;
+  border-radius:8px;
+  text-align:center;
+  transition:.3s;
+}
+
+.skill:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px rgba(34,197,94,.15);
+}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1.5rem;
+}
+
+.project{
+  background:#111827;
+  padding:1.5rem;
+  border-radius:10px;
+  transition:.3s;
+}
+
+.project:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 30px rgba(34,197,94,.2);
+}
+
+/* CONTACT */
+.contact{
+  background:#0f172a;
+  padding:1.5rem;
+  border-radius:10px;
+  text-align:center;
+}
+
+/* FOOTER */
+footer{
+  margin-top:2rem;
+  text-align:center;
+  font-size:.85rem;
+  color:#6b7280;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .container{
+    grid-template-columns:1fr;
+  }
+  .hero-img{
+    min-height:70vh;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- LEFT HERO -->
+  <div class="hero-img">
+    <div class="hero-text">
+      <h1>Hi, I’m <span>Mohd Nasir</span></h1>
+      <p>
+        Passionate developer focused on technology, growth,
+        and innovation—building modern solutions with clean code.
+      </p>
+      <div class="hero-buttons">
+        <a class="btn-primary" href="#contact">Hire Me</a>
+        <a class="btn-outline" href="#projects">View Work</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT CONTENT -->
+  <div class="content">
+
+    <div class="nav">
+      <strong>My Portfolio</strong>
+      <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p style="color:#9ca3af">
+        I enjoy solving problems, learning new technologies,
+        and building efficient applications. My journey in tech
+        is driven by consistency and curiosity.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill">Java</div>
+        <div class="skill">C</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">Python</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>Portfolio Website</h3>
+          <p style="color:#9ca3af">Responsive personal portfolio design.</p>
+        </div>
+        <div class="project">
+          <h3>Problem Solver</h3>
+          <p style="color:#9ca3af">Logic-focused coding projects.</p>
+        </div>
+        <div class="project">
+          <h3>UI Layouts</h3>
+          <p style="color:#9ca3af">Modern dark UI with Flexbox & Grid.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact:</h2>
+      <div class="contact">
+        <p>Email: <strong>your-mohdnasir8233@gmail.com</strong></p>
+        <p>
+          <a href="https://www.linkedin.com/in/mohd-nasir-9b5a57380/" style="color:#22c55e">LinkedIn</a> |
+          <a href="https://github.com/nasir1103" style="color:#22c55e">GitHub</a> |
+          <a href=" https://leetcode.com/u/nasir_1103/" style="color:#22c55e">LeetCode</a>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Mohd Nasir. All rights reserved.
+    </footer>
+
+  </div>
+</div>
+
+</body>
+</html>
+
+
